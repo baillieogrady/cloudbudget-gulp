@@ -1,0 +1,33 @@
+// base
+// -- colors
+
+$color-primary: #000;
+$color-secondary: orange;
+$color-tertiary: #000;
+
+// -- fonts
+
+$font-family: "Montserrat", Arial, Helvetica, sans-serif;
+$font-family-alt: "", Arial, Helvetica, sans-serif;
+$font-family-heading: "", Arial, Helvetica, sans-serif;
+
+// layout
+// -- grid
+$grid-gutter: 20px;
+$grid-container: 1000px;
+
+// menu
+// -- logo
+$width-logo: 50px;
+$width-nav: 735px;
+
+// -- burger
+$color-burger: #000;
+$width-burger-line: 20px;
+$height-burger-line: 3px;
+$margin-burger-line: 4px;
+$radius-burger-line: 0px;
+$transform-y-burger-line: $margin-burger-line + $height-burger-line;
+
+// -- overlay
+$background-color-overlay: #fff;
