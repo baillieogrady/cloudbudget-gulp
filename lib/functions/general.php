@@ -4,8 +4,8 @@
  *
  * This file contains general functions
  *
- * @author    Theme
- * @copyright 2019 Theme
+ * @author    Cloudbudget
+ * @copyright 2020 Cloudbudget
  * @version   1.0
  */
 
@@ -162,22 +162,3 @@ function no_wordpress_errors(){
     return $mime_types;
 }
 add_filter('upload_mimes', 'my_myme_types', 1, 1);
-
-/*
-PLUGINS
-*/
-
- 
-/*
-ACF Maps
-*/ 
-
-// function my_acf_init() {
-  
-// 	acf_update_setting('google_api_key', 'AIzaSyDlii-Zod8Zzb2Wonyyzuc2HSgK4OArY08');
-//   }
-  
-//   add_action('acf/init', 'my_acf_init');
-
-
-?>

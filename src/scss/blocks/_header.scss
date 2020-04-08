@@ -14,7 +14,6 @@
     display: inline-block;
   }
   &__nav {
-    width: $width-nav;
     > ul {
       display: flex;
       justify-content: space-between;
@@ -23,7 +22,7 @@
       li a {
         @include transition;
         &:hover {
-          color: $color-secondary;
+          color: $color-orange;
         }
       }
     }
@@ -53,7 +52,7 @@
       }
     }
     .current-menu-item > a {
-      color: $color-secondary;
+      color: $color-orange;
     }
     @include media-breakpoint-down(md) {
       position: absolute;

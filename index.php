@@ -8,7 +8,11 @@
  */
 get_header();
     echo '<main>';
-    echo get_template_part('lib/blocks/page-builder');
+    if ( have_posts() ) : 
+        while ( have_posts() ) : the_post();
+            echo the_content();
+        endwhile; 
+    endif; 
     echo '</main>';
 get_footer();
 ?>

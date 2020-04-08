@@ -1,7 +1,7 @@
 <?php
  /**
- * @author    Project Name
- * @copyright 2017 Project Name
+ * @author    Cloudbudget
+ * @copyright 2020 Cloudbudget
  * @version   1.0
  */
 
@@ -16,3 +16,4 @@ General Functions
 - basic theme functions
 */
 include_once( DIR . '/lib/functions/general.php' );
+include_once( DIR . '/lib/functions/acf.php' );

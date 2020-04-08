@@ -1,25 +1,25 @@
 // base
 // -- colors
 
-$color-primary: #000;
-$color-secondary: orange;
-$color-tertiary: #000;
+$color-black: #101010;
+$color-red: #D52047;
+$color-orange: #EE3D1B;
+$color-grey: #132743;
 
 // -- fonts
 
-$font-family: "Montserrat", Arial, Helvetica, sans-serif;
-$font-family-alt: "", Arial, Helvetica, sans-serif;
-$font-family-heading: "", Arial, Helvetica, sans-serif;
+$font-family: "Lato", Arial, Helvetica, sans-serif;
+$font-family-alt: "Lato", Arial, Helvetica, sans-serif;
+$font-family-heading: "Lato", Arial, Helvetica, sans-serif;
 
 // layout
-// -- grid
-$grid-gutter: 20px;
-$grid-container: 1000px;
+// -- gri
+$grid-gutter: 30px;
+$grid-container: 1110px;
 
 // menu
 // -- logo
-$width-logo: 50px;
-$width-nav: 735px;
+$width-logo: 172px;
 
 // -- burger
 $color-burger: #000;
