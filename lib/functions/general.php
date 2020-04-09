@@ -72,12 +72,6 @@ function excerpt($limit) {
 }
 
 /*
-Thumbnails
-- this theme supports thumbnails
-*/
-add_theme_support( 'post-thumbnails' );
-
-/*
 Scripts & Styles
 - include the scripts and stylesheets
 */

@@ -16,4 +16,5 @@ General Functions
 - basic theme functions
 */
 include_once( DIR . '/lib/functions/general.php' );
+include_once( DIR . '/lib/functions/images.php' );
 include_once( DIR . '/lib/functions/acf.php' );
