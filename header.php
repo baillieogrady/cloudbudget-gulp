@@ -1,3 +1,7 @@
+<?php
+    $logo = get_field('logo', 'options');
+?>
+
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?>>
     <head>
@@ -12,19 +16,45 @@
             <header class="header">
                 <div class="container">
                     <div class="header__container">
-                        <a class="header__logo" href="/">logo</a>
-                        <nav class="header__nav">
-                            <?php 
-                                wp_nav_menu( array(
-                                    'theme_location' => 'primary_nav',
-                                    'container' => ''
-                                ) );
-                            ?>
-                        </nav>
-                        <div class="header__burger">
-                            <div class="header__line"></div>
-                            <div class="header__line"></div>
-                            <div class="header__line"></div>
+                        <div class="row">
+                            <div class="justify-between">
+                                <a class="header__logo" href="/">
+                                    <img src="<?= $logo['url']; ?>" alt="<?= $logo['alt']; ?>" />
+                                </a>
+                                <nav class="header__nav">
+                                    <ul>
+                                        <li>
+                                            <a href="#two-column">
+                                                OVERVIEW
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#three-column">
+                                                FEATURES
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#four-column">
+                                                TECHNOLOGY
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#two-column-contact">
+                                                CONTACT
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <div>
+                                    <div>Language</div>
+                                    <a href="/login">LOGIN</a>
+                                </div>
+                                <div class="header__burger">
+                                    <div class="header__line"></div>
+                                    <div class="header__line"></div>
+                                    <div class="header__line"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

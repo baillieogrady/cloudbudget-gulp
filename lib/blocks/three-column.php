@@ -29,7 +29,7 @@ $heading = get_field('heading') ?: 'heading';
 // $text = get_field('text') ?: 'text';
 ?>
 
-<section id="<?= esc_attr($id); ?>" class="<?= esc_attr($className); ?>">
+<section id="three-column" class="<?= esc_attr($className); ?>">
     <h2><?= $heading; ?></h2>
         <?php if( have_rows('columns') ): ?>
             <?php while( have_rows('columns') ): the_row(); 
@@ -57,3 +57,6 @@ $heading = get_field('heading') ?: 'heading';
             <?php endwhile; ?>
         <?php endif; ?>
 </section>
+
+<!-- dynamic id for gutneberg block preview -->
+<!-- <?= //esc_attr($id); ?> -->

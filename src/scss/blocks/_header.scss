@@ -19,40 +19,16 @@
       justify-content: space-between;
       align-items: center;
       @include list-default;
+      li {
+        margin-left: 20px;
+      }
       li a {
+        color: #fff;
         @include transition;
         &:hover {
           color: $color-orange;
         }
       }
-    }
-    .sub-menu {
-      display: none;
-      @include list-default;
-      width: 100%;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      display: none;
-      @include media-breakpoint-down(md) {
-        position: static;
-        display: block;
-      }
-      li {
-        position: relative;
-        left: 25%;
-      }
-    }
-    .menu-item-has-children {
-      position: relative;
-      &:hover {
-        .sub-menu {
-          display: block;
-        }
-      }
-    }
-    .current-menu-item > a {
-      color: $color-orange;
     }
     @include media-breakpoint-down(md) {
       position: absolute;

@@ -29,7 +29,7 @@ $heading = get_field('heading') ?: 'heading';
 
 ?>
 
-<section id="<?= esc_attr($id); ?>" class="<?= esc_attr($className); ?>">
+<section id="four-column" class="<?= esc_attr($className); ?>">
     <h2><?= $heading; ?></h2>
     <?php if( have_rows('columns') ): ?>
             <?php while( have_rows('columns') ): the_row(); 

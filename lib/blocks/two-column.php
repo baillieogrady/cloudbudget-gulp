@@ -8,6 +8,10 @@
  * @param   bool $is_preview True during AJAX preview.
  * @param   (int|string) $post_id The post ID this block is saved to.
  */
+// change id if block spits out form\
+$toggle_id = false;
+
+$toggle_id ? $id_alt = "two-column-contact" : "two-column";
 
 // Create id attribute allowing for custom "anchor" value.
 $id = 'two-column-' . $block['id'];
@@ -30,7 +34,7 @@ $text_color = get_field('text_color') ?: 'text_color';
 
 ?>
 
-<section id="<?= esc_attr($id); ?>" class="<?= esc_attr($className); ?>" 
+<section id="<?= $id_alt; ?>" class="<?= esc_attr($className); ?>" 
     <?php if($background_color && $text_color): ?>
         style="background-color: <?= $background_color; ?>; color: <?= $text_color; ?>;"
     <?php elseif($background_color && !$text_color): ?>
@@ -99,7 +103,8 @@ $text_color = get_field('text_color') ?: 'text_color';
                             <?php endforeach; ?>
                         </ul>
                     <?php elseif($type === 'Form'):
-                            $form = get_field('form');  
+                            $form = get_field('form');
+                            $toggle_id = true;
                         ?>
                         <div>
                             <?= $form; ?>
