@@ -17,3 +17,6 @@ email
 number
 address
 small print
+
+// extras
+language toggle in header menu

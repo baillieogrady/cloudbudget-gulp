@@ -16,44 +16,42 @@
             <header class="header">
                 <div class="container">
                     <div class="header__container">
-                        <div class="row">
-                            <div class="justify-between">
-                                <a class="header__logo" href="/">
-                                    <img src="<?= $logo['url']; ?>" alt="<?= $logo['alt']; ?>" />
-                                </a>
-                                <nav class="header__nav">
-                                    <ul>
-                                        <li>
-                                            <a href="#two-column">
-                                                OVERVIEW
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#three-column">
-                                                FEATURES
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#four-column">
-                                                TECHNOLOGY
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#two-column-contact">
-                                                CONTACT
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                                <div>
-                                    <div>Language</div>
-                                    <a href="/login">LOGIN</a>
-                                </div>
-                                <div class="header__burger">
-                                    <div class="header__line"></div>
-                                    <div class="header__line"></div>
-                                    <div class="header__line"></div>
-                                </div>
+                        <div class="row justify-content-between align-items-center">
+                            <a class="header__logo" href="/">
+                                <img src="<?= $logo['url']; ?>" alt="<?= $logo['alt']; ?>" />
+                            </a>
+                            <nav class="header__nav">
+                                <ul>
+                                    <li>
+                                        <a href="#two-column">
+                                            OVERVIEW
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#three-column">
+                                            FEATURES
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#four-column">
+                                            TECHNOLOGY
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#two-column-contact">
+                                            CONTACT
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div>
+                                <!-- <div>Language</div> -->
+                                <a href="/login" class="btn">LOGIN</a>
+                            </div>
+                            <div class="header__burger">
+                                <div class="header__line"></div>
+                                <div class="header__line"></div>
+                                <div class="header__line"></div>
                             </div>
                         </div>
                     </div>

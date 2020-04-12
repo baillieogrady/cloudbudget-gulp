@@ -38,19 +38,15 @@
                         <?php endif; ?>
                     </nav>
                 </div>
-                <div class="col-lg-1 offset-lg-1">
+                <div class="col-lg-2 offset-lg-1">
                     <h4>Get in touch</h4>
-                    <ul>
-                        <?php if($email): ?>
-                            <li>
-                                <a href="mailto:<?= $email ?>"><?= $email ?></a>
-                            </li>
-                        <?php endif; ?>
-                        <?php if($phone_number): ?>
-                            <li>
-                                <a href="tel:<?= $phone_number ?>"><?= $phone_number ?></a>
-                            </li>
-                        <?php endif; ?>
+                    <?php if($email): ?>
+                        <a href="mailto:<?= $email ?>"><?= $email ?></a>
+                    <?php endif; ?>
+                    <?php if($phone_number): ?>
+                        <a href="tel:<?= $phone_number ?>"><?= $phone_number ?></a>
+                    <?php endif; ?>
+                    <ul class="footer__social">
                         <?php if($facebook): ?>
                             <li>
                                 <a href="<?= $facebook ?>" target="_blank">
@@ -82,14 +78,14 @@
                         <?php endif; ?>
                     </ul>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 offset-lg-1">
                     <h4>We support</h4>
                     <?php if($badges): ?>
                         <img src="<?= $badges['url'] ?>" alt="<?= $badges['alt'] ?>"/> 
                     <?php endif; ?>
                 </div>
             </div>
-            <p>
+            <p class="footer__small">
                 Copyright <?= date("Y"); ?> <?= bloginfo(); ?>
             </p>
         </div>

@@ -32,19 +32,21 @@ $background_image = get_field('background_image') ?: 'background_image';
 
 ?>
 
-<section id="<?= esc_attr($id); ?>" class="<?= esc_attr($className); ?>" 
+<section id="hero" class="hero d-flex justify-content-center align-items-center" 
 
-style="background: linear-gradient(90deg, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%), url('<?= $background_image['sizes']['hero'] ?>');"
+style="background-image: linear-gradient(90deg, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%), url('<?= $background_image['sizes']['hero'] ?>');"
 >
-    <h1><?= $heading; ?></h1>
-    <div>
-        <?= $text; ?>
+    <div class="hero__inner">
+        <h1 class="hero__heading"><?= $heading; ?></h1>
+        <div class="hero__lead">
+            <?= $text; ?>
+        </div>
+        <a href="<?= $button['link']; ?>" class="btn btn--alt"><?= $button['text']; ?></a>
     </div>
-    <a href="<?= $button['link']; ?>"><?= $button['text']; ?></a>
+</section>
 
     <!-- <style type="text/css">
         #<?php $id; ?> {
             background-color: orange;
         }
     </style> -->
-</section>

@@ -1,2 +1,26 @@
 .footer {
+    background-color: #FAFAFA;
+    padding: 8.5rem 0;
+
+    &__social li {
+        display: inline-block;
+        margin-right: 15px;
+    }
+
+    &__small {
+        padding-top: 8.5rem;
+    }
+
+    address {
+        font-style: normal;
+    }
+
+    nav a {
+        display: block;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
 }

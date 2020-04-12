@@ -1,16 +1,13 @@
 html {
   box-sizing: border-box;
   -ms-overflow-style: scrollbar;
+  font-size: 10px;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
-}
-
-html {
-  font-size: 10px;
 }
 
 body {
@@ -27,6 +24,20 @@ h4,
 h5,
 h6 {
   font-family: $font-family-heading;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 7.2rem;
+  margin-bottom: 0.55em;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 1.8rem;
 }
 
 a {

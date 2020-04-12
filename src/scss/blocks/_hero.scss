@@ -1,3 +1,21 @@
 .hero {
-    
+    height: 75vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #fff;
+
+    &__inner {
+        max-width: 560px;
+    }
+
+    &__heading {
+        letter-spacing: 0.04em;
+    }
+
+    &__lead {
+        font-size: 2.4rem;
+        line-height: 1.5;
+        margin-bottom: 4rem;
+    }
 }
