@@ -1,0 +1,17 @@
+.three-column {
+    text-align: center;
+    background-color: #FAFAFA;
+    &__heading {
+        margin-bottom: 6rem;
+        font-weight: bold;
+    }
+    &__box {
+        position: relative;
+        top: -90px;
+        background-color: #fff;
+        width: 83%;
+        margin: 0 auto;
+        padding: 25px;
+        border-radius: 6px;
+    }
+}

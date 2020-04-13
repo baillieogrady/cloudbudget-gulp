@@ -34,7 +34,7 @@ $text_color = get_field('text_color') ?: 'text_color';
 
 ?>
 
-<section id="<?= $id_alt; ?>" class="<?= esc_attr($className); ?>" 
+<section id="<?= $id_alt; ?>" class="two-column" 
     <?php if($background_color && $text_color): ?>
         style="background-color: <?= $background_color; ?>; color: <?= $text_color; ?>;"
     <?php elseif($background_color && !$text_color): ?>
@@ -44,74 +44,69 @@ $text_color = get_field('text_color') ?: 'text_color';
     <?php endif; ?>
 >
     <?php if( have_rows('columns') ): ?>
-        <div>
-            <?php while( have_rows('columns') ): the_row(); 
-                $type = get_sub_field('type');
-                ?>
-                <div>
-                    <?php if($type === 'Default'): 
+        <div class="container">
+            <div class="row">
+                <?php while( have_rows('columns') ): the_row(); 
+                    $type = get_sub_field('type');
+                    ?>
+                    <?php if($type === 'Default'):  
                             $heading = get_sub_field('heading');
                             $text = get_sub_field('text');
                             $link = get_sub_field('link');
                             $icons = get_sub_field('icons');
-                        ?>
+                            ?>
+                        <div class="col-lg-5">
+                            <?php if($heading): ?>
+                                <h2><?= $heading ?></h2>
+                            <?php endif; ?>
 
-                        <?php if($heading): ?>
-                            <h2><?= $heading ?></h2>
-                        <?php endif; ?>
+                            <?php if($text): ?>
+                                <div>
+                                    <?= $text ?>
+                                </div>
+                            <?php endif; ?>
 
-                        <?php if($text): ?>
-                            <div>
-                                <?= $text ?>
+                            
+                            <?php if( $icons ): ?>
+                                <img src="<?= $icons['url'] ?>" alt="<?= $image['alt'] ?>" class="two-column__icons" />
+                            <?php endif; ?>
+
+                            <?php if($link): ?>
+                                <a href="<?= $link['link'] ?>" class="link"><?= $link['text'] ?></a>
+                            <?php endif; ?>
                             </div>
-                        <?php endif; ?>
-
-                        <?php if($link): ?>
-                            <a href="<?= $link['link'] ?>"><?= $link['text'] ?></a>
-                        <?php endif; ?>
-
-                        <?php if( $icons ): ?>
-                            <ul>
-                                <?php foreach( $icons as $icon ): ?>
-                                    <li>
-                                        <img src="<?php echo esc_url($image['sizes']['icon']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                                    </li>
-                                <?php endforeach; ?>
-                            </ul>
-                        <?php endif; ?>
                     <?php elseif($type === 'Video'):
-                            $video = get_field('video');  
+                            $video = get_sub_field('video');
                         ?>
-                
-                        <div>
-                            <img src="<?= $video['image']['sizes']['video']; ?>" alt="<?= esc_attr($video['image']['alt']); ?>">
-                            <a href="<?= $video['youtube_id'] ?>">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" viewBox="0 0 66 66" fill="none">
-                                    <circle cx="33" cy="33" r="33" fill="#ED4C5C"/>
-                                    <path d="M39.75 33L28.5 40.875V25.125L39.75 33Z" fill="white"/>
-                                </svg>
-                            </a>
+                        <div class="col-lg-5 offset-lg-1">
+                            <div class="two-column__video">
+                                <img src="<?= $video['image']['sizes']['video']; ?>" alt="<?= $video['image']['alt']; ?>">
+                                <a href="<?= $video['youtube_id'] ?>" class="two-column__play">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" viewBox="0 0 66 66" fill="none">
+                                        <circle cx="33" cy="33" r="33" fill="#ED4C5C"/>
+                                        <path d="M39.75 33L28.5 40.875V25.125L39.75 33Z" fill="white"/>
+                                    </svg>
+                                </a>
+                            <div>
                         </div>
                     <?php elseif($type === 'Images'):
-                            $images = get_field('images');  
+                            $image = get_sub_field('image');  
                         ?>
-                        <ul>
-                            <?php foreach( $images as $image ): ?>
-                                <li>
-                                    <img src="<?php echo esc_url($image['sizes']['video']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                                </li>
-                            <?php endforeach; ?>
-                        </ul>
+                        <div class="col-lg-6 offset-lg-1">
+                            <img src="<?php echo esc_url($image['sizes']['slider']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                        </div>
                     <?php elseif($type === 'Form'):
-                            $form = get_field('form');
+                            $form = get_sub_field('form');
                             $toggle_id = true;
                         ?>
-                        <div>
-                            <?= $form; ?>
+                        <div class="col-lg-6 offset-lg-1">
+                            <div class="two-column__form">
+                                <?= $form; ?>
+                            </div>
                         </div>
                     <?php endif; ?>
-                </div>
-            <?php endwhile; ?>
+                    <?php endwhile; ?>
+            </div>
         </div>
     <?php endif; ?>
 </section>

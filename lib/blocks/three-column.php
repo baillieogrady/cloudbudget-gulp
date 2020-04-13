@@ -27,36 +27,39 @@ if( !empty($block['align']) ) {
 // Load values and assign defaults.
 $heading = get_field('heading') ?: 'heading';
 // $text = get_field('text') ?: 'text';
+
 ?>
 
 <section id="three-column" class="<?= esc_attr($className); ?>">
-    <h2><?= $heading; ?></h2>
-        <?php if( have_rows('columns') ): ?>
-            <?php while( have_rows('columns') ): the_row(); 
-                $image = get_sub_field('image');
-                $columns_heading = get_sub_field('heading');
-                $text = get_sub_field('text');
-                $link = get_sub_field('link');
-            ?>
-            <div>
-                <?php if($image): ?>
-                    <img src="<?= $image['sizes']['feature']; ?>" alt="<?= $image['alt']; ?>">
-                <?php endif; ?>
-                <div>
-                    <?php if($columns_heading): ?>
-                        <h3><?= $columns_heading; ?></h3>
-                    <?php endif; ?>
-                    <?php if($text): ?>
-                        <div><?= $text; ?></div>
-                    <?php endif; ?>
-                    <?php if($link): ?>
-                        <a href="<?= $link['link'] ?>"><?= $link['text'] ?></a>
-                    <?php endif; ?>
-                </div>
-            </div>
-            <?php endwhile; ?>
-        <?php endif; ?>
-</section>
+    <h2 class="three-column__heading"><?= $heading; ?></h2>
+    <?php if( have_rows('columns') ): ?>
+        <div class="container">
+            <div class="row justify-content-between">
+                <?php while( have_rows('columns') ): the_row(); 
+                        $image = get_sub_field('image');
+                        $columns_heading = get_sub_field('heading');
+                        $text = get_sub_field('text');
+                        $link = get_sub_field('link');
+                    ?>
 
-<!-- dynamic id for gutneberg block preview -->
-<!-- <?= //esc_attr($id); ?> -->
+                    <div class="col-lg-4">
+                        <?php if($image): ?>
+                            <img src="<?= $image['sizes']['feature']; ?>" alt="<?= $image['alt']; ?>">
+                        <?php endif; ?>
+                        <div class="three-column__box">
+                            <?php if($columns_heading): ?>
+                                <h3><?= $columns_heading; ?></h3>
+                            <?php endif; ?>
+                            <?php if($text): ?>
+                                <div><?= $text; ?></div>
+                            <?php endif; ?>
+                            <?php if($link): ?>
+                                <a href="<?= $link['link'] ?>" class="link"><?= $link['text'] ?></a>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+            </div>
+        </div>
+    <?php endif; ?>
+</section>
