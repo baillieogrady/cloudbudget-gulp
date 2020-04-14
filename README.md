@@ -12,8 +12,6 @@ $ git clone https://github.com/baillieogrady/cloudbudget-sage
 
 ## Theme development
 
-*See full roots sage source & setup [here](https://github.com/roots/sage)*
-
 * Run `yarn` from the theme directory to install dependencies
 * Run `gulp` from the theme directory to spin up a hot reload server.
 
