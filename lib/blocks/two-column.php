@@ -9,9 +9,6 @@
  * @param   (int|string) $post_id The post ID this block is saved to.
  */
 // change id if block spits out form\
-$toggle_id = false;
-
-$toggle_id ? $id_alt = "two-column-contact" : "two-column";
 
 // Create id attribute allowing for custom "anchor" value.
 $id = 'two-column-' . $block['id'];
@@ -34,7 +31,7 @@ $text_color = get_field('text_color') ?: 'text_color';
 
 ?>
 
-<section id="<?= $id_alt; ?>" class="two-column" 
+<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>" 
     <?php if($background_color && $text_color): ?>
         style="background-color: <?= $background_color; ?>; color: <?= $text_color; ?>;"
     <?php elseif($background_color && !$text_color): ?>
@@ -81,7 +78,7 @@ $text_color = get_field('text_color') ?: 'text_color';
                         <div class="col-lg-5 offset-lg-1">
                             <div class="two-column__video">
                                 <img src="<?= $video['image']['sizes']['video']; ?>" alt="<?= $video['image']['alt']; ?>">
-                                <a href="<?= $video['youtube_id'] ?>" class="two-column__play">
+                                <a href="https://www.youtube.com/watch?v=<?= $video['youtube_id'] ?>" class="two-column__play" data-fancybox>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" viewBox="0 0 66 66" fill="none">
                                         <circle cx="33" cy="33" r="33" fill="#ED4C5C"/>
                                         <path d="M39.75 33L28.5 40.875V25.125L39.75 33Z" fill="white"/>
@@ -93,7 +90,7 @@ $text_color = get_field('text_color') ?: 'text_color';
                             $image = get_sub_field('image');  
                         ?>
                         <div class="col-lg-6 offset-lg-1">
-                            <img src="<?php echo esc_url($image['sizes']['slider']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                            <img src="<?php echo esc_url($image['sizes']['slider']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="two-column__images" />
                         </div>
                     <?php elseif($type === 'Form'):
                             $form = get_sub_field('form');

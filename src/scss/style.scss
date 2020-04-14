@@ -1,14 +1,15 @@
 @import "normalize";
 @import "variables";
 @import "helpers";
+@import "grid/bootstrap-grid";
 @import "base";
 @import "fonts";
 @import "utils";
 
-@import "grid/bootstrap-grid";
 
 @import "partials/buttons";
 @import "partials/link";
+@import "partials/burger";
 
 @import "blocks/header";
 @import "blocks/footer";

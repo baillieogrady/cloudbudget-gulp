@@ -29,27 +29,35 @@ $heading = get_field('heading') ?: 'heading';
 
 ?>
 
-<section id="four-column" class="<?= esc_attr($className); ?>">
-    <h2><?= $heading; ?></h2>
-    <?php if( have_rows('columns') ): ?>
-            <?php while( have_rows('columns') ): the_row(); 
-                $image = get_sub_field('image');
-                $columns_heading = get_sub_field('heading');
-                $text = get_sub_field('text');
-            ?>
-            <div>
-                <?php if($image): ?>
-                    <img src="<?= $image['sizes']['feature']; ?>" alt="<?= $image['alt']; ?>">
-                <?php endif; ?>
-                <div>
-                    <?php if($columns_heading): ?>
-                        <h3><?= $columns_heading; ?></h3>
-                    <?php endif; ?>
-                    <?php if($text): ?>
-                        <div><?= $text; ?></div>
-                    <?php endif; ?>
+<section id="<?php echo esc_attr($id); ?>" class="<?= esc_attr($className); ?>">
+    <h2 class="four-column__heading"><?= $heading; ?></h2>
+    <?php if( have_rows('columns') ): 
+            $count = 1;
+        ?>
+        <div class="container">
+            <div class="row">
+                <?php while( have_rows('columns') ): the_row(); 
+                    $image = get_sub_field('image');
+                    $columns_heading = get_sub_field('heading');
+                    $text = get_sub_field('text');
+                ?>
+                <div class="col-lg-3">
+                    <div class="four-column__box">
+                        <p class="four-column__number">0<?= $count ?></p>
+                        <?php if($image): ?>
+                            <img src="<?= $image['sizes']['feature']; ?>" alt="<?= $image['alt']; ?>" class="four-column__image">
+                        <?php endif; ?>
+                        <?php if($columns_heading): ?>
+                            <h3><?= $columns_heading; ?></h3>
+                        <?php endif; ?>
+                        <?php if($text): ?>
+                            <div><?= $text; ?></div>
+                        <?php endif; ?>
+                    </div>
                 </div>
+                <?php $count += 1; ?>
+                <?php endwhile; ?>
             </div>
-            <?php endwhile; ?>
+        </div>
         <?php endif; ?>
 </section>

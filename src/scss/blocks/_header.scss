@@ -3,22 +3,25 @@
   top: 0;
   left: 0;
   width: 100%;
-  // background-color: green;
   font-size: 1.4rem;
-  padding-top: 5rem;
+  padding-top: 1.5rem;
+  @include media-breakpoint-up(lg) {
+    padding-top: 5rem;
+  }
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-
-    > .row {
-      width: 100%;
-    }
   }
   &__logo {
-    width: $width-logo;
     display: inline-block;
+  }
+  &__btn {
+    display: none;
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
   }
   &__nav {
     > ul {
@@ -39,6 +42,7 @@
       }
     }
     @include media-breakpoint-down(md) {
+      pointer-events: none;
       position: absolute;
       @include flex-center;
       top: 0;
@@ -51,12 +55,17 @@
         display: block;
         li {
           opacity: 0;
+          a {
+            color: #101010;
+            font-size: 3rem;
+          }
         }
       }
       &.open {
         background-color: $background-color-overlay;
         opacity: 1;
         z-index: 1;
+        pointer-events: auto;
         li {
           animation: fadeInRight 0.3s ease forwards;
           $elements: 10;
@@ -66,42 +75,6 @@
               animation-delay: 0.4s + $count * $i;
             }
           }
-        }
-      }
-    }
-  }
-  &__burger {
-    z-index: 9999;
-    display: none;
-    cursor: pointer;
-    @include media-breakpoint-down(md) {
-      display: block;
-    }
-    .header__line {
-      position: relative;
-      background-color: $color-burger;
-      width: $width-burger-line;
-      height: $height-burger-line;
-      border-radius: $radius-burger-line;
-      transition: 240ms;
-      &:not(:last-child) {
-        margin-bottom: $margin-burger-line;
-      }
-      &:nth-child(2) {
-        @include transition;
-      }
-    }
-    &.active {
-      .header__line {
-        &:nth-child(1) {
-          transform: translateY($transform-y-burger-line) rotate(45deg);
-        }
-        &:nth-child(2) {
-          transform: translateY($transform-y-burger-line) rotate(45deg);
-          opacity: 0;
-        }
-        &:nth-child(3) {
-          transform: translateY(-$transform-y-burger-line) rotate(-45deg);
         }
       }
     }

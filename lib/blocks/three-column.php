@@ -30,7 +30,7 @@ $heading = get_field('heading') ?: 'heading';
 
 ?>
 
-<section id="three-column" class="<?= esc_attr($className); ?>">
+<section id="<?php echo esc_attr($id); ?>" class="<?= esc_attr($className); ?>">
     <h2 class="three-column__heading"><?= $heading; ?></h2>
     <?php if( have_rows('columns') ): ?>
         <div class="container">

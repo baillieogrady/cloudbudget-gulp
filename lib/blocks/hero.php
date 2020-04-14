@@ -32,7 +32,7 @@ $background_image = get_field('background_image') ?: 'background_image';
 
 ?>
 
-<section id="hero" class="hero d-flex justify-content-center align-items-center" 
+<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> d-flex justify-content-center align-items-center" 
 
 style="background-image: linear-gradient(90deg, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%), url('<?= $background_image['sizes']['hero'] ?>');"
 >

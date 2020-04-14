@@ -39,12 +39,12 @@
                     </nav>
                 </div>
                 <div class="col-lg-2 offset-lg-1">
-                    <h4>Get in touch</h4>
+                    <h4 class="footer__contact">Get in touch</h4>
                     <?php if($email): ?>
-                        <a href="mailto:<?= $email ?>"><?= $email ?></a>
+                        <a href="mailto:<?= $email ?>" style="display: block;"><?= $email ?></a>
                     <?php endif; ?>
                     <?php if($phone_number): ?>
-                        <a href="tel:<?= $phone_number ?>"><?= $phone_number ?></a>
+                        <a href="tel:<?= $phone_number ?>" style="display: block;"><?= $phone_number ?></a>
                     <?php endif; ?>
                     <ul class="footer__social">
                         <?php if($facebook): ?>
@@ -81,7 +81,7 @@
                 <div class="col-lg-3 offset-lg-1">
                     <h4>We support</h4>
                     <?php if($badges): ?>
-                        <img src="<?= $badges['url'] ?>" alt="<?= $badges['alt'] ?>"/> 
+                        <img src="<?= $badges['url'] ?>" alt="<?= $badges['alt'] ?>" class="footer__badges"/> 
                     <?php endif; ?>
                 </div>
             </div>

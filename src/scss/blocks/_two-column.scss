@@ -1,18 +1,33 @@
 .two-column {
     &__video {
         position: relative;
+        padding-top: 2.5rem;
+        @include media-breakpoint-up(lg) {
+            padding-top: 0;
+        }
     }
 
     &__play {
         position: absolute;
-        left: 0;
+        left: 50%;
         top: 50%;
         transform: translateX(-50%) translateY(-50%);
+        
+        @include media-breakpoint-up(lg) {
+            left: 0;
+            top: 50%;
+        }
     }
 
     &__icons {
         max-width: 132px;
         margin-top: 40px;
+    }
+
+    &__images {
+        @include media-breakpoint-down(lg) {
+            padding-top: 2.5rem;
+        }
     }
 
     &__form {
@@ -40,6 +55,7 @@
             color: #fff;
             font-size: 1.4rem;
             padding: 1.7rem 3.4rem;
+            margin-bottom: 0;
         }
 
         select,

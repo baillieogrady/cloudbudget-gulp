@@ -35,7 +35,7 @@ function scss() {
 
 // JS
 function js() {
-  return src("src/js/scripts/*.js")
+  return src(["src/js/vendor/*.js","src/js/scripts/*.js"])
     .pipe(
       babel({
         presets: ["@babel/preset-env"]
