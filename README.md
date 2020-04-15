@@ -8,7 +8,7 @@ cloudbudget-gulp is a custom WordPress theme based on a Landing page concept I d
 
 ### Plugins
 
-- [ACF Pro](https://www.advancedcustomfields.com/pro/)
+- [ACF Pro](https://www.advancedcustomfields.com/pro/) (Ensure you enter and activate your ACF Pro activation key). 
 - [Contact form 7](https://en-gb.wordpress.org/plugins/contact-form-7/)
 
 ### Theme
