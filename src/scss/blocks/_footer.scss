@@ -18,6 +18,9 @@
 
     &__contact {
         margin-top: 2rem;
+        @include media-breakpoint-up(lg) {
+            margin-top: 0;
+        }
     }
 
     &__badges {
