@@ -4,6 +4,8 @@ cloudbudget-gulp is a custom WordPress theme based on a Landing page concept I d
 
 ## Installation
 
+**Note:** Installing this theme requires you to also install a database for the purpose of loading in the ACF Pro fields. Therefore, all content including the media files and themes will be overwritten. Similar to a fresh install of WordPress
+
 ### Plugins
 
 - [ACF Pro](https://www.advancedcustomfields.com/pro/)
