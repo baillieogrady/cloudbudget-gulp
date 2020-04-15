@@ -1,6 +1,6 @@
-# CloudBudget sage
+# CloudBudget gulp
 
-cloudbudget-sage is a custom WordPress theme based on a Landing page concept I discovered [online](https://dribbble.com/shots/8449132-CloudBudget-Business-Landing-Page-Figma-Freebie).
+cloudbudget-gulp is a custom WordPress theme based on a Landing page concept I discovered [online](https://dribbble.com/shots/8449132-CloudBudget-Business-Landing-Page-Figma-Freebie).
 
 ## Installation
 
@@ -14,7 +14,7 @@ cloudbudget-sage is a custom WordPress theme based on a Landing page concept I d
 Install theme into the WordPress themes directory
 
 ```
-$ git clone https://github.com/baillieogrady/cloudbudget-sage
+$ git clone https://github.com/baillieogrady/cloudbudget-gulp
 ```
 
 **OR**
@@ -46,5 +46,5 @@ Simply import this via the [**all-in-one wp migration plugin**](https://en-gb.wo
 ## Contributing
 
 ```
-$ git clone https://github.com/baillieogrady/cloudbudget-sage
+$ git clone https://github.com/baillieogrady/cloudbudget-gulp
 ```
