@@ -38,6 +38,15 @@ You'll notice a file named **aio.wpress** in this repo. This is a file containin
 
 Simply import this via the [**all-in-one wp migration plugin**](https://en-gb.wordpress.org/plugins/all-in-one-wp-migration/).
 
+### Login details
+
+```
+https://yourwebsite.com/login
+```
+
+Username: admin  
+Password: admin
+
 ## Theme development
 
 * Run `yarn` from the theme directory to install dependencies
