@@ -2,7 +2,7 @@
 
 CloudBudget Gulp is a custom WordPress theme based on a landing page concept I discovered [online](https://dribbble.com/shots/8449132-CloudBudget-Business-Landing-Page-Figma-Freebie). The content on the website is populated via custom Gutenberg blocks. I used ACF Pro to create the individual fields on the Gutenberg Blocks.
 
-[Demo](https://cloudbudgetgulp.baillieogrady.com)
+[Demo](https://cloudbudget.baillieogrady.com)
 
 ## Usage
 
