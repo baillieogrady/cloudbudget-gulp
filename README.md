@@ -6,13 +6,13 @@ CloudBudget Gulp is a custom WordPress theme based on a landing page concept I d
 
 ## Usage
 
-1. [Download](http://baillieogrady.com/downloads/cloudbudget-gulp.zip) production built theme and upload via WordPress theme uploader at the following url:
+1. [Download](https://baillieogrady.com/downloads/cloudbudget-gulp.zip) production built theme and upload via the WordPress theme uploader at the following url:
 
 ```
 https://yourwebsite.com/wp-admin/theme-install.php
 ```
 
-2. [Import](http://baillieogrady.com/downloads/cloudbudget-gulp-acf.zip) ACF Pro fields at the following url on your website:
+2. [Import](https://github.com/baillieogrady/cloudbudget-gulp/blob/master/acf-export-2020-04-20.json) ACF Pro fields at the following url on your website:
 
 ```
 https://yourwebsite.com/wp-admin/edit.php?post_type=acf-field-group&page=acf-tools
