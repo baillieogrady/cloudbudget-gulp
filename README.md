@@ -6,6 +6,8 @@ CloudBudget Gulp is a custom WordPress theme based on a landing page concept I d
 
 ## Usage
 
+### Installation
+
 1. [Download](https://baillieogrady.com/downloads/cloudbudget-gulp.zip) production built theme and upload via the WordPress theme uploader at the following url:
 
 ```
