@@ -19,11 +19,19 @@ https://yourwebsite.com/wp-admin/theme-install.php
 ```
 https://yourwebsite.com/wp-admin/edit.php?post_type=acf-field-group&page=acf-tools
 ```
+### Custom Gutenberg Blocks
 
-### Requirements
+- Hero
+- Two Column
+- Three Column
+- Four Column
 
-- [ACF Pro](https://www.advancedcustomfields.com/pro/) plugin
-- [Contact Form 7](https://en-gb.wordpress.org/plugins/contact-form-7/) plugin
+## Requirements
+
+### Plugins
+
+- [ACF Pro](https://www.advancedcustomfields.com/pro/)
+- [Contact Form 7](https://en-gb.wordpress.org/plugins/contact-form-7/)
 
 ## Theme development
 
