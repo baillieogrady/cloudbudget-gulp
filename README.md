@@ -1,61 +1,58 @@
 # CloudBudget gulp
 
-cloudbudget-gulp is a custom WordPress theme based on a Landing page concept I discovered [online](https://dribbble.com/shots/8449132-CloudBudget-Business-Landing-Page-Figma-Freebie).
+CloudBudget Gulp is a custom WordPress theme based on a landing page concept I discovered [online](https://dribbble.com/shots/8449132-CloudBudget-Business-Landing-Page-Figma-Freebie). The content on the website is populated via custom Gutenberg blocks. I used ACF Pro to create the individual fields on the Gutenberg Blocks.
 
-## Installation
+[Demo](https://cloudbudgetgulp.baillieogrady.com)
 
-**Note:** Installing this theme requires you to also install a database for the purpose of loading in the ACF Pro fields. Therefore, all content including the media files and themes will be overwritten. Similar to a fresh install of WordPress
+## Usage
 
-### Plugins
-
-- [ACF Pro](https://www.advancedcustomfields.com/pro/) (Ensure you enter and activate your ACF Pro activation key). 
-- [Contact form 7](https://en-gb.wordpress.org/plugins/contact-form-7/)
-
-### Theme
-
-Install theme into the WordPress themes directory
+1. [Download](http://baillieogrady.com/downloads/cloudbudget-gulp.zip) production built theme and upload via WordPress theme uploader at the following url:
 
 ```
-$ git clone https://github.com/baillieogrady/cloudbudget-gulp
+https://yourwebsite.com/wp-admin/theme-install.php
 ```
 
-**OR**
-
-Download this repo and place it in the following directory:
+2. [Import](http://baillieogrady.com/downloads/cloudbudget-gulp-acf.zip) ACF Pro fields at the following url on your website:
 
 ```
-wp-content/themes/
-```
-**OR**
-
-Download this repo and upload via the WordPress GUI, at the following url:
-
-```
-https://yourwebsite.com/wp-admin/themes.php
+https://yourwebsite.com/wp-admin/edit.php?post_type=acf-field-group&page=acf-tools
 ```
 
-### Database
+### Requirements
 
-You'll notice a file named **aio.wpress** in this repo. This is a file containing all the database information to initally setup the custom ACF Pro fields.
-
-Simply import this via the [**all-in-one wp migration plugin**](https://en-gb.wordpress.org/plugins/all-in-one-wp-migration/).
-
-### Login details
-
-```
-https://yourwebsite.com/login
-```
-
-Username: admin  
-Password: admin
+- [ACF Pro](https://www.advancedcustomfields.com/pro/) plugin
+- [Contact Form 7](https://en-gb.wordpress.org/plugins/contact-form-7/) plugin
 
 ## Theme development
 
-* Run `yarn` from the theme directory to install dependencies
-* Run `gulp` from the theme directory to spin up a hot reload server.
+### Installation
 
-## Contributing
+Clone this repo into your WordPress themes directory
 
 ```
 $ git clone https://github.com/baillieogrady/cloudbudget-gulp
 ```
+
+### Requirements
+
+Make sure all dependencies have been installed before moving on:
+
+* [WordPress](https://wordpress.org/) >= 4.7
+* [PHP](https://secure.php.net/manual/en/install.php) >= 7.1.3 (with [`php-mbstring`](https://secure.php.net/manual/en/book.mbstring.php) enabled)
+* [Composer](https://getcomposer.org/download/)
+* [Node.js](http://nodejs.org/) >= 8.0.0
+* [Yarn](https://yarnpkg.com/en/docs/install)
+
+*See full roots sage source & setup [here](https://github.com/roots/sage)*
+
+* Run `composer install` from the theme directory to install composer dependencies 
+* Run `yarn` from the theme directory to install dependencies
+* Update `resources/assets/config.json` settings:
+  * `devUrl` should reflect your local development hostname
+  * `publicPath` should reflect your WordPress folder structure (`/wp-content/themes/sage` for non-[Bedrock](https://roots.io/bedrock/) installs)
+
+### Build commands
+
+* `yarn start` — Compile assets when file changes are made, start Browsersync session
+* `yarn build` — Compile and optimize the files in your assets directory
+* `yarn build:production` — Compile assets for production
